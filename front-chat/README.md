@@ -1,8 +1,10 @@
-# Modern Chat Application - Frontend
+# Chat Application - Frontend
 
-![Chat App Screenshot](https://via.placeholder.com/800x500/1e3a8a/ffffff?text=Chat+App+Screenshot)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-A modern, real-time chat application built with React, Vite, and Tailwind CSS. This frontend application provides a sleek and responsive user interface for real-time messaging with support for multiple chat rooms and users.
+A modern, real-time chat application frontend built with React, Vite, and Tailwind CSS. This application provides a sleek and responsive user interface for real-time messaging with support for multiple chat rooms and users.
 
 ## ✨ Features
 
@@ -19,13 +21,14 @@ A modern, real-time chat application built with React, Vite, and Tailwind CSS. T
 
 - Node.js 16+ (LTS recommended)
 - npm or yarn package manager
+- Backend server running (see [backend README](../chat-app-backend/README.md))
 
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/chat-app.git
-   cd chat-app/front-chat
+   git clone https://github.com/learnerview/chatApp.git
+   cd chatApp/front-chat
    ```
 
 2. Install dependencies:
@@ -35,14 +38,20 @@ A modern, real-time chat application built with React, Vite, and Tailwind CSS. T
    yarn install
    ```
 
-3. Start the development server:
+3. Configure environment variables:
+   Create a `.env` file in the `front-chat` directory with:
+   ```env
+   VITE_API_BASE_URL=http://localhost:8080
+   ```
+
+4. Start the development server:
    ```bash
    npm run dev
    # or
    yarn dev
    ```
 
-4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+5. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ### Building for Production
 
@@ -71,24 +80,18 @@ This will create a `dist` folder with the production build.
 src/
 ├── assets/          # Static assets
 ├── components/      # Reusable UI components
+│   ├── ChatPage.jsx # Main chat interface
+│   ├── JoinCreateChat.jsx # Join/Create room component
+│   └── ...
 ├── config/          # Application configuration
-├── context/         # React context providers
-├── services/        # API service layer
 └── utils/           # Utility functions
-```
-
-## 🌐 Environment Variables
-
-Create a `.env` file in the root directory with the following variables:
-
-```env
-VITE_API_BASE_URL=http://localhost:8080
 ```
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit issues and pull requests to the [GitHub repository](https://github.com/learnerview/chatApp).
 
-## 📄 License
+## 🔗 Related
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- [Backend Documentation](../chat-app-backend/README.md)
+- [Project Repository](https://github.com/learnerview/chatApp)

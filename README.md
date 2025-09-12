@@ -1,10 +1,11 @@
 # Modern Chat Application
 
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-2.7.0-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.1.0-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=for-the-badge&logo=websocket&logoColor=white)
 
-A full-stack real-time chat application built with React (Frontend) and Spring Boot (Backend), featuring WebSocket for instant messaging, multiple chat rooms, and a modern, responsive user interface.
+A full-stack real-time chat application built with React (Frontend) and Spring Boot (Backend) with MongoDB, featuring WebSocket for instant messaging, multiple chat rooms, and a modern, responsive user interface.
 
 ## 🌟 Features
 
@@ -17,9 +18,9 @@ A full-stack real-time chat application built with React (Frontend) and Spring B
 
 ### Backend
 - ⚡ Real-time communication with WebSocket (STOMP)
+- 🗄️ MongoDB for data persistence
 - 🔒 Secure WebSocket connections
-- 📊 In-memory message storage
-- 🌐 RESTful API for room management
+- 🌐 RESTful API for room and user management
 - 📡 Actuator endpoints for monitoring
 
 ## 🏗️ Project Structure
@@ -43,35 +44,35 @@ chat-app-main/
 
 - Node.js 16+ and npm/yarn (for frontend)
 - Java 17+ and Maven (for backend)
+- MongoDB 6.0+
 - Git
 
 ### Running the Application
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/chat-app.git
-   cd chat-app
+   git clone https://github.com/learnerview/chatApp.git
+   cd chatApp
    ```
 
-2. **Start the Backend**
+2. **Start MongoDB**
+   - Make sure MongoDB is running locally on the default port (27017)
+   - Or update the MongoDB connection string in `chat-app-backend/src/main/resources/application.properties`
+
+3. **Start the Backend**
    ```bash
    cd chat-app-backend
    mvn spring-boot:run
    ```
    The backend will start on `http://localhost:8080`
 
-3. **Start the Frontend** (in a new terminal)
+4. **Start the Frontend** (in a new terminal)
    ```bash
    cd front-chat
    npm install
    npm run dev
    ```
    The frontend will be available at `http://localhost:5173`
-
-## 📚 Documentation
-
-- [Frontend Documentation](./front-chat/README.md)
-- [Backend Documentation](./chat-app-backend/README.md)
 
 ## 🛠️ Built With
 
@@ -84,33 +85,17 @@ chat-app-main/
 - SockJS + STOMP
 
 ### Backend
-- Spring Boot 2.7.x
+- Spring Boot 3.1.x
 - Spring WebSocket
-- Spring Web
+- Spring Data MongoDB
+- Spring Security
 - Lombok
 - Spring Boot Actuator
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🤝 Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are welcome! Please feel free to submit issues and pull requests.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## 📝 Project Link
 
-## ✉️ Contact
-
-Project Link: [https://github.com/your-username/chat-app](https://github.com/your-username/chat-app)
-
-## 🙏 Acknowledgments
-
-- [React](https://reactjs.org/)
-- [Spring Boot](https://spring.io/projects/spring-boot)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
+GitHub: [https://github.com/learnerview/chatApp](https://github.com/learnerview/chatApp)
