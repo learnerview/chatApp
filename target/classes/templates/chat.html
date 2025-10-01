@@ -42,9 +42,9 @@
     <a th:href="@{/rooms}" class="btn btn-link">Back to rooms</a>
 </div>
 
-<script>
-    const roomId = /*[[${roomId}]]*/ 'room1';
-    const username = /*[[${username}]]*/ 'user';
+<script th:inline="javascript">
+    const roomId = /*[[${roomId}]]*/ 'lobby';
+    const username = /*[[${username}]]*/ 'guest';
 </script>
 <script th:src="@{/js/chat.js}"></script>
 </body>
